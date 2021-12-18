@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "55d3ad85-3598-4b2f-8d85-6270b61d7f84",
+		"name": "central-bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/central-bank/wealth-threshold",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/central-bank/wealth-threshold",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"central-bank",
+						"wealth-threshold"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/central-bank/regional-info/evaluate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/central-bank/regional-info/evaluate?city=Washington \n",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"central-bank",
+						"regional-info",
+						"evaluate"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Washington \n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "127.0.0.1"
+		},
+		{
+			"key": "port",
+			"value": "8082"
+		}
+	]
+}

@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "350b9348-c96b-45ea-a495-3f04e104086f",
+		"name": "'wealth-rating-ms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "clients",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 123456789,\r\n    \"personalInfo\": {\r\n        \"firstName\": \"Bill\",\r\n        \"lastName\": \"Gates\",\r\n        \"city\": \"Washington\"\r\n    },\r\n    \"financialInfo\": {\r\n        \"cash\": 16000000000,\r\n        \"numberOfAssets\": 50\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/{{ApiVersion}}/clients",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"{{ApiVersion}}",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/{{ApiVersion}}/clients",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"{{ApiVersion}}",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clients/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/{{ApiVersion}}/clients/:id",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"{{ApiVersion}}",
+						"clients",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "123456789"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "127.0.0.1"
+		},
+		{
+			"key": "port",
+			"value": "8080"
+		},
+		{
+			"key": "ApiVersion",
+			"value": "v1"
+		}
+	]
+}
